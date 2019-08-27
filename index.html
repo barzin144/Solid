@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Solid Principles</title>
+
+    <link href="css/impress.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a
+            simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress">
+
+        <div id="title" class="step slide" data-x="0" data-y="0" data-z="50000" data-rotate="90">
+            <span class="bookTitle">Clean Architecture
+                <span class="footnote">PART III</span>
+            </span>
+            <h1>Design Principles</h1>
+            <span class="footnote">Robert C. Martin</span>
+        </div>
+        <div class="step slide" data-x="0" data-y="0" data-z="0">
+            <h2>The SOLID principles tell us how to arrange our functions and data structures into
+                classes, and how those classes should be interconnected</h2>
+        </div>
+        <div class="step slide" data-x="1000" data-y="0" data-rotate-y="20">
+            <h2>
+                The goal of the principles is the creation of mid-level software structures that:
+            </h2>
+            <ul>
+                <li>
+                    <small> Tolerate change</small>
+                </li>
+                <li>
+                    <small> Are easy to understand</small>
+                </li>
+                <li>
+                    <small> Are the basis of components that can be used in many software systems</small>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step slide" data-x="2000" data-y="0" data-rotate-y="40">
+            <h2>The history of the SOLID principles</h2>
+            <ul>
+                <li>
+                    <small>&#128118;Robert C. Martin began to assemble them in the late 1980 </small>
+                </li>
+                <li>
+                    <small>
+                        Over the years, the principles have shifted and changed. Some
+                        were deleted. Others were merged. Still others were added. The final grouping
+                        stabilized in the early 2000s
+                    </small>
+
+                </li>
+                <li>
+                    <small>&#128102; Michael Feathers 2004</small>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0" data-y="1000" data-rotate-y="0">
+            <h2><b class="red">S</b>OLID</h2>
+            <h2>SRP: THE SINGLE RESPONSIBILITY PRINCIPLE</h2>
+            <ul>
+                <li>
+                    <small>A function should do one, and only one, thing. </small>
+                </li>
+                <li>
+                    <small> A module should be responsible to one, and only one, user or stakeholder
+                    </small>
+                </li>
+                <li>
+                    <small>A module should be responsible to one, and only one, actor.
+                    </small>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="1000" data-rotate-y="20" style="text-align: center">
+            <img src='./img/7-1.PNG' />
+        </div>
+        <div class="step slide" data-x="2000" data-y="1000" data-rotate-y="40" style="text-align: center">
+            <img src='./img/7-2.PNG' />
+        </div>
+        <div class="step slide" data-x="0" data-y="2000" data-rotate-y="0">
+            <h2>These problems occur because we put code
+                that different actors depend on into close proximity. The SRP says to separate the
+                code that diferent actors depend on.
+            </h2>
+        </div>
+        <div class="step slide" data-x="1000" data-y="2000" data-rotate-y="20">
+            <h2>MERGES</h2>
+            <small>
+                Two different developers, possibly from two different teams, check out the Employee
+                class and begin to make changes. Unfortunately their changes collide. The result is a
+                merge.
+            </small>
+            <br /><br />
+            <small>
+                In our example, the merge puts both the CTO and the COO at risk. It’s not
+                inconceivable that the CFO could be affected as well.
+            </small>
+        </div>
+        <div class="step slide" data-x="2000" data-y="2000" data-rotate-y="40">
+            <h2>SOLUTIONS</h2>
+            <div style="text-align: center">
+                <img src='./img/7-3.PNG' />
+            </div>
+        </div>
+        <div class="step slide" data-x="0" data-y="3000" data-rotate-y="0">
+            <h2>Facade pattern</h2>
+            <div style="text-align: center">
+                <img src='./img/7-4.PNG' />
+            </div>
+        </div>
+        <div class="step slide" data-x="1000" data-y="3000" data-rotate-y="20" style="text-align: center">
+            <img src='./img/7-5.PNG' />
+        </div>
+
+        <div class="step slide" data-x="0" data-y="4000" data-rotate-y="0">
+            <h2>S<b class="red">O</b>LID</h2>
+            <h2>OCP: THE OPEN-CLOSED PRINCIPLE</h2>
+            <ul>
+                <li>
+                    <h2>A software artifact should be open for extension but closed for modification.</h2>
+                    <small>
+                        1988 by Bertrand Meyer
+                    </small>
+                </li>
+                <li>
+                    <small>
+                        If simple extensions to the requirements force massive changes to the
+                        software, then the architects of that software system have engaged in a spectacular
+                        failure.
+                    </small>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="4000" data-rotate-y="20" style="text-align: center">
+            <img src='./img/8-2.PNG' />
+        </div>
+        <div class="step slide" data-x="2000" data-y="4000" data-rotate-y="40" style="text-align: center">
+            <img src='./img/8-3.PNG' />
+        </div>
+        <div class="step slide" data-x="0" data-y="5000" data-rotate-y="0" style="text-align: center">
+            <img src='./img/8-2-2.PNG' />
+        </div>
+        <div class="step slide" data-x="1000" data-y="5000" data-rotate-y="20">
+            <h2>OCP</h2>
+            <ul>
+                <li>
+                    <small>
+                        The goal is
+                        to make the system easy to extend without incurring a high impact of change.
+                    </small>
+                </li>
+                <li>
+                    <small>
+                        This
+                        goal is accomplished by partitioning the system into components, and arranging
+                        those components into a dependency hierarchy that protects higher-level components
+                        from changes in lower-level components.
+                    </small>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0" data-y="6000" data-rotate-y="0">
+            <h2>SO<b class="red">L</b>ID</h2>
+            <h2>LSP: THE LISKOV SUBSTITUTION PRINCIPLE</h2>
+            <ul>
+                <li>
+                    <small>
+                        If for each object
+                        o1 of type S there is an object o2 of type T such that for all programs P defined in terms of
+                        T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T
+                    </small>
+                </li>
+            </ul>
+            <small> 1988 by Barbara Liskov</small>
+        </div>
+        <div class="step slide" data-x="1000" data-y="6000" data-rotate-y="20" style="text-align: center">
+            <img src='./img/9-1.PNG' />
+        </div>
+        <div class="step slide" data-x="2000" data-y="6000" data-rotate-y="40" style="text-align: center">
+            <img src='./img/9-2.PNG' />
+        </div>
+        <div class="step slide" data-x="0" data-y="7000" data-rotate-y="0">
+            <div style="text-align: center">
+                <img src='./img/9-2-2.PNG' />
+            </div>
+            <br />
+            <small>
+                The only way to defend against this kind of LSP violation is to add mechanisms to
+                the User (such as an if statement) that detects whether the Rectangle is, in fact, a
+                Square. Since the behavior of the User depends on the types it uses, those types are
+                not substitutable.
+            </small>
+        </div>
+        <div class="step slide" data-x="1000" data-y="7000" data-rotate-y="20">
+            <h2>
+                EXAMPLE LSP VIOLATION
+            </h2>
+            <small>
+                Assume that we are building an aggregator for many taxi dispatch services.
+            </small>
+            <br />
+            <div style="text-align: center">
+                <img src='./img/9-3.PNG' />
+            </div>
+        </div>
+        <div class="step slide" data-x="2000" data-y="7000" data-rotate-y="40">
+            <h2>LSP</h2>
+            <ul>
+                <li>
+                    <small>
+                        The LSP can, and should, be extended to the level of architecture. A simple violation
+                        of substitutability, can cause a system’s architecture to be polluted with a significant
+                        amount of extra mechanisms.
+                    </small>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0" data-y="8000" data-rotate-y="0">
+            <h2>SOL<b class="red">I</b>D</h2>
+            <h2>ISP: THE INTERFACE SEGREGATION PRINCIPLE</h2>
+            <div style="text-align: center">
+                <img src='./img/10-1.PNG' />
+            </div>
+        </div>
+        <div class="step slide" data-x="1000" data-y="8000" data-rotate-y="20" style="text-align: center">
+            <img src='./img/10-2.PNG' />
+        </div>
+        <div class="step slide" data-x="2000" data-y="8000" data-rotate-y="40">
+            <ul>
+                <li>
+                    <h2>ISP AND LANGUAGE</h2>
+                    <small>
+                        This is the primary reason
+                        that dynamically typed languages create systems that are more flexible and less
+                        tightly coupled than statically typed languages.
+                    </small>
+                </li>
+                <li>
+                    <h2>
+                        ISP AND ARCHITECTURE
+                    </h2>
+                    <small>
+                        It is harmful to depend on modules that
+                        contain more than you need.
+                    </small>
+                    <br />
+                    <div style="text-align: center">
+                        <img src='./img/10-3.PNG' />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0" data-y="9000" data-rotate-y="0">
+            <h2>SOLI<b class="red">D</b></h2>
+            <h2>DIP: THE DEPENDENCY INVERSION PRINCIPLE</h2>
+            <ul>
+                <li>
+                    <small>
+                        The Dependency Inversion Principle (DIP) tells us that the most flexible systems are
+                        those in which source code dependencies refer only to abstractions, not to
+                        concretions.
+                    </small>
+                </li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="9000" data-rotate-y="20">
+            <ul>
+                <li>
+                    <small>
+                        It is the volatile concrete elements of our system that we want to avoid depending
+                        on. Those are the modules that we are actively developing, and that are undergoing
+                        frequent change.
+                    </small>
+                </li>
+                <li><small>Don’t refer to volatile concrete classes.</small></li>
+                <li><small>Don’t derive from volatile concrete classes.</small></li>
+                <li><small>Don’t override concrete functions.</small></li>
+                <li><small>Never mention the name of anything concrete and volatile.</small></li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="2000" data-y="9000" data-rotate-y="40">
+            <h2>FACTORIES</h2>
+            <div style="text-align: center">
+                <img src='./img/11-1.PNG' />
+            </div>
+        </div>
+        <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="15"></div>
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+</body>
+
+</html>
